@@ -1,0 +1,33 @@
+#include <stdio.h>
+#include <stdlib.h>
+/*Crie um programa capaz de criar a transposta de uma matriz. A matriz deve ser lida
+de teclado.*/
+
+int main()
+{
+    int a[50][50], i,j,linhaA,colunaA, transp[50][50];
+    printf("digite o numero de linhas da matriz A");
+    scanf("%d", &linhaA);
+    printf("digite o numero de colunas da matriz A");
+    scanf("%d", &colunaA);
+
+
+    for(i=0; i<linhaA; i++){
+        for(j=0; j<colunaA; j++){
+           printf("digite os numeros para a matriz A[%d][%d]:", i,j);
+           scanf("%d", &a[i][j]);
+        }
+    }
+    for(i=0; i<linhaA; i++){
+        for(j=0; j<colunaA; j++){
+           transp[j][i]=a[i][j];
+        }
+    }
+       for(i=0; i<linhaA; i++){
+        for(j=0; j<colunaA; j++){
+            printf("%3d", transp[i][j]);
+        }
+        printf("\n");
+    }
+    return 0;
+}
