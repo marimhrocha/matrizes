@@ -1,0 +1,55 @@
+
+int main()
+{
+    int N[2][3], i,j, M[2][3], O2[2][3],O1[2][3],O3[2][3];
+
+    for(i=0; i<2; i++){
+        for(j=0; j<3; j++){
+           printf("digite os numeros para a matriz M[%d][%d]:", i,j);
+           scanf("%d", &M[i][j]);
+        }
+    }
+    for(i=0; i<2; i++){
+        for(j=0; j<3; j++){
+           printf("digite os numeros para a matriz N[%d][%d]:", i,j);
+           scanf("%d", &N[i][j]);
+        }
+    }
+    for(i=0; i<2; i++){
+        for(j=0; j<3; j++){
+        O1[i][j] = M[i][j]*N[i][j];
+        }
+    }
+    for(i=0; i<2; i++){
+        for(j=0; j<3; j++){
+        O2[i][j] = M[i][j]+N[i][j];
+        }
+    }
+    for(i=0; i<2; i++){
+        for(j=0; j<3; j++){
+        O3[i][j]= M[i][j]-N[i][j];
+        }
+    }
+       printf("A\n");
+     for(i=0; i<2; i++){
+        for(j=0; j<3; j++){
+                printf("%3d", O1[i][j]);
+        }
+           printf("\n");
+     }
+        printf("B\n");
+    for(i=0; i<2; i++){
+        for(j=0; j<3; j++){
+                printf("%3d", O2[i][j]);
+        }
+        printf("\n");
+    }
+       printf("C\n");
+    for(i=0; i<2; i++){
+        for(j=0; j<3; j++){
+                printf("%3d", O3[i][j]);
+        }
+        printf("\n");
+     }
+    return 0;
+}
