@@ -1,0 +1,68 @@
+#include <stdio.h>
+#include <stdlib.h>
+/*Elaborar um algoritmo que lê uma matriz M(6,6) e um valor A e multiplica a matriz
+M pelo valor A e coloca os valores da matriz multiplicados por A em um vetor de
+V(36) e escreve no final o vetor V*/
+
+int main()
+{
+    int M[5][5], i, j, Soma = 0, n = 5;
+
+    for(i=0; i<5; i++){
+        for(j=0; j<5; j++){
+           printf("digite os numeros para a matriz M[%d][%d]:", i,j);
+           scanf("%d", &M[i][j]);
+        }
+    }
+//A
+    for(j=0; j<5; j++){
+        Soma += M[3][j];
+    }
+
+    printf("Soma da linha 4 = %d\n ", Soma);
+    Soma = 0;
+//B
+    for(i=0; i<5; i++){
+        Soma += M[i][1];
+    }
+
+    printf("Soma da coluna 2 = %d\n", Soma);
+    Soma = 0;
+//C
+    for(i=0; i<5; i++){
+        for(j=0; j<5; j++){
+            if (i = j){
+                Soma += M[i][j];
+            }
+        }
+    }
+
+    printf("Soma da diagonal principal = %d\n", Soma);
+    Soma = 0;
+//D
+    for(i=0; i<5; i++){
+        for(j=0; j<5; j++){
+            if ((i + j) == (n - 1)){
+                Soma += M[i][j];
+            }
+        }
+    }
+    printf("Soma da diagonal secundaria = %d\n ", Soma);
+    Soma = 0;
+//E
+    for(i=0; i<5; i++){
+        for(j=0; j<5; j++){
+            Soma += M[i][j];
+        }
+    }
+
+    printf("Soma da matriz = %d\n", Soma);
+
+    for(i=0; i<5; i++){
+        for(j=0; j<5; j++){
+            printf("%3d", M[i][j]);
+        }
+        printf("\n");
+    }
+    return 0;
+}
